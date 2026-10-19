@@ -6,6 +6,7 @@ Subject: [PATCH 3/3] selene: media: libstagefright: Limit max width/height to
 
 Adapt width/height sizes to Redmi 10 display (2400x1080),
 and limit that in code.
+!!! CHANGED TO 1600x720 (dandelion)
 
 Reference: https://github.com/mtk-watch/android_frameworks_av/commit/3181400697637f0d9c7619efc13d1400ec9b38f1
 
@@ -27,7 +28,7 @@ index d7c65706d6..0e029c5fb5 100644
          <MediaCodec name="OMX.google.h264.decoder" type="video/avc">
              <!-- profiles and levels:  ProfileHigh : Level51 -->
 -            <Limit name="size" min="2x2" max="2048x2048" />
-+            <Limit name="size" min="2x2" max="2400x1080" />
++            <Limit name="size" min="2x2" max="1600x720" />
              <Limit name="alignment" value="2x2" />
              <Limit name="block-size" value="16x16" />
              <Limit name="block-count" range="1-16384" />
@@ -36,7 +37,7 @@ index d7c65706d6..0e029c5fb5 100644
          <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
              <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
 -            <Limit name="size" min="2x2" max="2048x2048" />
-+            <Limit name="size" min="2x2" max="2400x1080" />
++            <Limit name="size" min="2x2" max="1600x720" />
              <Limit name="alignment" value="2x2" />
              <Limit name="block-size" value="8x8" />
              <Limit name="block-count" range="1-65536" />
@@ -45,7 +46,7 @@ index d7c65706d6..0e029c5fb5 100644
          </MediaCodec>
          <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8">
 -            <Limit name="size" min="2x2" max="2048x2048" />
-+            <Limit name="size" min="2x2" max="2400x1080" />
++            <Limit name="size" min="2x2" max="1600x720" />
              <Limit name="alignment" value="2x2" />
              <Limit name="block-size" value="16x16" />
              <Limit name="block-count" range="1-8192" /> <!-- max 2048x1024 -->
@@ -61,7 +62,7 @@ index e853da9763..06b23ad567 100644
 +            //@Vdec_drv_if_public.c
 +            //  DEC_MAX_WIDTH = 2400;
 +            //  DEC_MAX_HEIGHT = 1080;
-+            if ((newWidth * newHeight) > (2400 * 1080)) {
++            if ((newWidth * newHeight) > (1600 * 720)) {
 +                ALOGE("frame size is not supported (%d x %d)", newWidth, newHeight);
 +                return OMX_ErrorUnsupportedSetting;
 +            }

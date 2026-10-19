@@ -15,7 +15,7 @@ include $(LOCAL_PATH)/vendor_logtag.mk
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Shipping API Level
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Always preopt extracted APKs to prevent extracting out of the APK
 # for gms modules.
@@ -153,7 +153,7 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.blossom
 
 # Display
-TARGET_SCREEN_DENSITY := 280
+TARGET_SCREEN_DENSITY := 288
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1.vendor \
@@ -522,10 +522,3 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
-
-#Dolby
-$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
-ifeq ($(TARGET_INCLUDE_DOLBY),true)
-    PRODUCT_COPY_FILES += \
-        $(DEVICE_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
-endif

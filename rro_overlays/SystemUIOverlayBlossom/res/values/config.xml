@@ -40,7 +40,7 @@
     <bool name="config_screenRecordHEVC">false</bool>
 
     <!-- Whether to play turbulence noise after clicking the play button -->
-    <bool name="config_turbulenceNoise">false</bool>
+    <bool name="config_turbulenceNoise">true</bool>
 
     <!-- Whether to enable dimming navigation buttons when wallpaper is not visible, should be
          enabled for OLED devices to reduce/prevent burn in on the navigation bar (because of the

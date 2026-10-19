@@ -514,7 +514,7 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
     <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
@@ -593,17 +593,17 @@
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
     <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
-    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.7</item>
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">1.0</item>
 
     <!-- The amount to scale reduced scale snapshots for Overview and snapshot starting windows.
          Reduced scale snapshots are loaded before full screen snapshots to improve load times and
          minimize the chance the user will see an empty task card. If set to 0, reduced scale
          snapshots are disabled, and snapshots will only be stored at config_highResTaskSnapshotScale
          -->
-    <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.3</item>
+    <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.5</item>
 
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
-    <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+    <bool name="config_use16BitTaskSnapshotPixelFormat">false</bool>
 
     <!-- True if the device supports Sustained Performance Mode -->
     <bool name="config_sustainedPerformanceModeSupported">true</bool>
@@ -656,5 +656,5 @@
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
    rotations as the default behavior. -->
-    <bool name="config_allowAllRotations">true</bool>
+    <bool name="config_allowAllRotations">false</bool>
 </resources>

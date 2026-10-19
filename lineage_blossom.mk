@@ -18,19 +18,9 @@ $(call inherit-product, device/xiaomi/blossom/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit mindthegapps stuff.
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-
 # include private signing keys
 -include vendor/lineage-priv/keys/keys.mk
 
-# always nuke audiofx
-NUKE_AUDIOFX := true
-
-# Dolby Atmos
-TARGET_INCLUDE_DOLBY := true
-
-YAOYORO_MAINTAINER := zyexro
 TARGET_EXCLUDE_ADB_ROOT := true
 
 PRODUCT_NAME := lineage_blossom
