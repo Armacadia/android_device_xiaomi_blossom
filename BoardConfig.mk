@@ -60,11 +60,11 @@ MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := blossom_defconfig # no file, only make build system happy
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img # automatically copied
-TARGET_FORCE_PREBUILT_KERNEL := true # dont really build with our imcomplete "source"
+TARGET_KERNEL_CONFIG := blossom_defconfig
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
+TARGET_FORCE_PREBUILT_KERNEL := false # i'm guessing it's safe to build it now?
 
 # Bootloader
 BOARD_BOOT_HEADER_VERSION := 2
