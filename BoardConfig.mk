@@ -60,10 +60,7 @@ MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := blossom_defconfig
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
+TARGET_KERNEL_SOURCE := kernel/xiaomi/blossom
 TARGET_FORCE_PREBUILT_KERNEL := false # i'm guessing it's safe to build it now?
 
 # Bootloader
