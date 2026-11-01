@@ -178,9 +178,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/framework_compatibi
 # Wi-Fi
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
-# Wi-Fi
-WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
-
 # SELinux
 include device/lineage/sepolicy/libion/sepolicy.mk
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
