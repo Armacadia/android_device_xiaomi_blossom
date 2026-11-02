@@ -1,8 +1,5 @@
 deviceDir=$(gettop)/device/xiaomi/blossom/
 
-# Apply camera patches
-${deviceDir}/patch_camera.sh
-
 # apply patches
 ${deviceDir}/applyPatches.sh ${deviceDir}/patches
 
