@@ -525,10 +525,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/power-libperfmgr \
     $(LOCAL_PATH)
 
-# Overlay
-$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
-
-
 # Runtime Resource Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayBlossom \
@@ -542,4 +538,3 @@ PRODUCT_PACKAGES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/blossom/blossom-vendor.mk)
-
